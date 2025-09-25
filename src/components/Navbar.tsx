@@ -8,7 +8,7 @@ export default function Navbar() {
     <>
       {/* Hamburger button */}
       <div className="fixed top-4 left-4 z-50">
-        <button onClick={() => setIsOpen(true)} className="text-3xl">
+        <button onClick={() => setIsOpen(true)} className="text-6xl">
           ☰
         </button>
       </div>

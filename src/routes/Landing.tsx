@@ -5,9 +5,9 @@ export default function Landing() {
       {/* Hero Image */}
       <div className="flex justify-center">
         <img
-          src="/path/to/your-image.png"
+          src="/images/ella.svg" 
           alt="Ella Sanchez"
-          className="w-96 h-[500px] object-cover shadow-lg border-2 border-gray-300 rotate-1"
+          className="w-96 h-[500px] object-cover  rotate-1"
         />
       </div>
 

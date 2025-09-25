@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Landing from "./routes/Landing";
 import Projects from "./routes/Projects";
-import Design from "./routes/Design";
+import Design from "./routes/About";
 
 function AnimatedRoutes() {
   const location = useLocation();
