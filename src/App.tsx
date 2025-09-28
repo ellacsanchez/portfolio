@@ -1,9 +1,10 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Landing from "./routes/Landing";
 import Projects from "./routes/Projects";
-import Design from "./routes/About";
+import About from "./routes/About";
+import Contact from "./routes/Contact";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -18,14 +19,16 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
+        {/* 👇 Default homepage (Landing) */}
         <Route
-          path="/"
+          index
           element={
             <motion.div {...pageTransition}>
               <Landing />
             </motion.div>
           }
         />
+
         <Route
           path="/projects"
           element={
@@ -34,11 +37,31 @@ function AnimatedRoutes() {
             </motion.div>
           }
         />
+
         <Route
-          path="/design"
+          path="/about"
           element={
             <motion.div {...pageTransition}>
-              <Design />
+              <About />
+            </motion.div>
+          }
+        />
+
+        <Route
+          path="/contact"
+          element={
+            <motion.div {...pageTransition}>
+              <Contact />
+            </motion.div>
+          }
+        />
+
+        {/* 👇 Fallback: if nothing matches, show Landing */}
+        <Route
+          path="*"
+          element={
+            <motion.div {...pageTransition}>
+              <Landing />
             </motion.div>
           }
         />
@@ -49,9 +72,9 @@ function AnimatedRoutes() {
 
 export default function App() {
   return (
-    <Router>
+    <>
       <Navbar />
       <AnimatedRoutes />
-    </Router>
+    </>
   );
 }

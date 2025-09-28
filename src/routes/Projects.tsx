@@ -7,30 +7,29 @@ export default function Projects() {
       </div>
 
       {/* Intro + Categories Row */}
-      <div className="flex justify-between items-start">
-        {/* Left: Intro */}
-        <div className="flex-1 pr-8 border-r text-left">
-          <p className="text-lg text-[#4a4a2a] mb-4">
+      <div className="flex justify-between items-stretch w-full max-w-8xl mx-auto ">
+        {/* Left: Intro with left border */}
+        <div className="flex-1 pl-6 pr-10 border-l border-[#4a4a2a] text-left">
+          <p className="text-lg text-[#4a4a2a] mb-6 leading-relaxed">
             these are some of the projects I have done or are currently working on.
           </p>
-          <p className="text-lg text-[#4a4a2a]">
-            each of my projects are vested in a certain passion of mine. through the
-            multitude of possibilities offered by website development, i can attempt
-            to translate the world around me for others to read, watch, understand, 
-            and experience. be it fashion, politics, engineering project team planes, 
-            each of my projects has meaning tied, and while minute to some, large to myself
-            and hopefully you as well.  
-
+          <p className="text-lg text-[#4a4a2a] leading-relaxed">
+            each of my projects are vested in a certain passion of mine, from software
+            development and data analytics, videography, and writing!
           </p>
         </div>
 
-        {/* Right: Categories */}
-        <div className="flex-1 pl-8 border-l text-right flex flex-col gap-4">
+        {/* Right: Categories with right border */}
+        <div className="flex-1 pl-10 pr-6 border-r border-[#4a4a2a] flex flex-col justify-center text-right gap-6">
           <span className="text-lg text-[#4a4a2a]">software</span>
           <span className="text-lg text-[#4a4a2a]">video</span>
           <span className="text-lg text-[#4a4a2a]">writing</span>
         </div>
       </div>
+
+
+
+
 
       {/* Project Sections (scrollable below) */}
       <div className="flex flex-col gap-16">

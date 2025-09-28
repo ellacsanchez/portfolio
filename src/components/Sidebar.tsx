@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 type SidebarProps = {
   isOpen: boolean;
@@ -7,12 +7,22 @@ type SidebarProps = {
 };
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
-  const menuItems = [
-    { name: "HOME", path: "/" },
-    { name: "PROJECTS", path: "/projects" },
-    { name: "ABOUT", path: "/design" },
-    { name: "CONTACT", path: "/contact" }
-  ];
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleHome = (e: React.MouseEvent) => {
+    onClose();
+    if (location.pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } // else let the <Link to="/" /> handle navigation
+  };
+
+  const handleProjects = (e: React.MouseEvent) => {
+    e.preventDefault();
+    onClose();
+    navigate("/#projects"); // Landing will smooth-scroll to the anchor
+  };
 
   return (
     <motion.div
@@ -21,23 +31,28 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       transition={{ duration: 0.3 }}
       className="fixed top-0 left-0 h-full w-64 bg-[#4a4a2a] text-white p-12 z-40"
     >
-      {/* Close button */}
-      <button
-        onClick={onClose}
-        className="absolute top-4 right-4 text-2xl font-bold"
-      >
-        ✕
-      </button>
-
-      {/* Menu items */}
-      <ul className="mt-24 flex flex-col gap-8 text-2xl font-semibold tracking-wide">
-        {menuItems.map((item) => (
-          <li key={item.name}>
-            <Link to={item.path} onClick={onClose} className="hover:opacity-70">
-              {item.name}
-            </Link>
-          </li>
-        ))}
+      <ul className="mt-24 flex flex-col gap-8 text-3xl font-semibold tracking-wide">
+        <li>
+          <Link to="/" onClick={handleHome} className="hover:opacity-70">
+            HOME
+          </Link>
+        </li>
+        <li>
+          {/* use a button so we fully control the hash nav */}
+          <button onClick={handleProjects} className="hover:opacity-70 text-left w-full">
+            PROJECTS
+          </button>
+        </li>
+        <li>
+          <Link to="/about" onClick={onClose} className="hover:opacity-70">
+            ABOUT
+          </Link>
+        </li>
+        <li>
+          <Link to="/contact" onClick={onClose} className="hover:opacity-70">
+            CONTACT
+          </Link>
+        </li>
       </ul>
     </motion.div>
   );

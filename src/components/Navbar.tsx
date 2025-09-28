@@ -6,12 +6,20 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Hamburger button */}
-      <div className="fixed top-4 left-4 z-50">
-        <button onClick={() => setIsOpen(true)} className="text-6xl">
-          ☰
-        </button>
+     {/* Hamburger button */}
+      <div className="fixed top-8 left-8 z-50">
+        <label className="burger burger--large">
+          <input
+            type="checkbox"
+            checked={isOpen}
+            onChange={() => setIsOpen(!isOpen)}
+          />
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
       </div>
+
 
       {/* Sidebar */}
       <Sidebar isOpen={isOpen} onClose={() => setIsOpen(false)} />
