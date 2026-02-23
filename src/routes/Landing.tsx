@@ -59,7 +59,7 @@ export default function Landing() {
       title: "CUAir Website",
       image: `${process.env.PUBLIC_URL}/images/cuairweb.png`,
       description:
-        "Redesigned and maintained main, public facing website for project team.",
+        "Redesigned main, public facing website for project team & competition deliverable page on 2026 aircraft.",
       href: "https://cuair.org/index.html",
     },
     {
@@ -125,7 +125,7 @@ export default function Landing() {
             </span>
             <br />
             <span className="typing-line line3">
-              UI/UX and Full-Stack WebDev.
+              software development and design.
             </span>
           </p>
         </div>
