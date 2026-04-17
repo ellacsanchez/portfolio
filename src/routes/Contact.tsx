@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Instagram, Mail } from "lucide-react";
-import { spring, container, item } from "../motion/spring"; // adjust if folder different
+import { spring, container, item } from "../motion/spring";
 
 export default function ContactPage() {
   return (
@@ -15,12 +14,14 @@ export default function ContactPage() {
         <h1 className="text-6xl font-bold font-reenie text-center text-[#4a4a2a] mb-12 tracking-widest">
           CONTACT
         </h1>
-        <p className= "text-2xl font-reenie text-center mb-12 text-[#4a4a2a]">
+
+        <p className="text-2xl font-reenie text-center mb-12 text-[#4a4a2a]">
           Feel free to reach out for any questions! Always happy to chat :)
         </p>
 
-        {/* Grid of square cards */}
+        {/* Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+
           {/* GitHub */}
           <motion.a
             href="https://github.com/ellacsanchez"
@@ -32,7 +33,11 @@ export default function ContactPage() {
             transition={spring}
             className="aspect-square border rounded-xl bg-gray-50 flex items-center justify-center cursor-pointer shadow-sm hover:shadow-md"
           >
-            <Github size={64} className="text-[#4a4a2a]" />
+            <img
+              src="/images/github.svg"
+              alt="GitHub"
+              className="w-16 h-16 object-contain"
+            />
           </motion.a>
 
           {/* Mail */}
@@ -44,7 +49,11 @@ export default function ContactPage() {
             transition={spring}
             className="aspect-square border rounded-xl bg-gray-50 flex items-center justify-center cursor-pointer shadow-sm hover:shadow-md"
           >
-            <Mail size={64} className="text-[#4a4a2a]" />
+            <img
+              src="/images/mail.svg"
+              alt="Email"
+              className="w-16 h-16 object-contain"
+            />
           </motion.a>
 
           {/* LinkedIn */}
@@ -58,7 +67,11 @@ export default function ContactPage() {
             transition={spring}
             className="aspect-square border rounded-xl bg-gray-50 flex items-center justify-center cursor-pointer shadow-sm hover:shadow-md"
           >
-            <Linkedin size={64} className="text-[#4a4a2a]" />
+            <img
+              src="/images/linkedin.svg"
+              alt="LinkedIn"
+              className="w-16 h-16 object-contain"
+            />
           </motion.a>
 
           {/* Instagram */}
@@ -72,8 +85,13 @@ export default function ContactPage() {
             transition={spring}
             className="aspect-square border rounded-xl bg-gray-50 flex items-center justify-center cursor-pointer shadow-sm hover:shadow-md"
           >
-            <Instagram size={64} className="text-[#4a4a2a]" />
+            <img
+              src="/images/instagram.svg"
+              alt="Instagram"
+              className="w-16 h-16 object-contain"
+            />
           </motion.a>
+
         </div>
       </motion.div>
     </div>
