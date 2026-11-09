@@ -53,6 +53,7 @@ export default function Landing() {
       image: `${process.env.PUBLIC_URL}/images/wardrobe.png`,
       description:
         "A full-stack wardrobe to plan, pack, and store your closet! Built with Remix, Prisma, and Cloudinary.",
+      href: "https://github.com/ellacsanchez/pocket_closet"
     },
     {
       id: "cuair-website",
@@ -82,8 +83,16 @@ export default function Landing() {
 
   const videos: Video[] = [
     {
+      id: "promo2",
+      title: "CUAir Giving Day 2026",
+      description:
+        "A short-form animation promoting donations to CUAir for Cornell's university-wide Giving Day.",
+      thumbnail: `${process.env.PUBLIC_URL}/images/gd26.jpg`,
+      url: "https://www.youtube.com/watch?v=yfJDmJqdh2Y",
+    },
+    {
       id: "promo1",
-      title: "CUAir Giving Day",
+      title: "CUAir Giving Day 2025",
       description:
         "A short-form video promoting donations to CUAir for Cornell's university-wide Giving Day.",
       thumbnail: `${process.env.PUBLIC_URL}/images/givingday.png`,
@@ -121,7 +130,7 @@ export default function Landing() {
             </span>
             <br />
             <span className="typing-line line2">
-              in Communication at Cornell University, with an interest in
+              in Law & Society at Cornell University, with an interest in
             </span>
             <br />
             <span className="typing-line line3">

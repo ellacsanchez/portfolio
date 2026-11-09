@@ -95,14 +95,17 @@ export default function About() {
   ];
 
   const classes = [
+    "CS 6850: Structure of Information Networks",
     "CS 4820: Analysis of Algorithms",
+    "CS 3780: Machine Learning",
+    "CS 3410: Computer System Organization and Programming (C & Assembly)",
     "CS 3110: OOP & DSA Functional Programming (OCaml)",
     "CS 2110: Object-Oriented Programming & Data Structures (Java)",
     "CS 1110: Introduction to Computing (Python)",
     "MATH 2940: Linear Algebra",
     "MATH 1920: Multivariable Calculus",
     "ECE 2720: Data Science for Engineers",
-    "ENGRI 1101: Applications of Operation Research",
+    "LAW 3281: Constitutional Politics",
     "COMM 1300: Visual Communication",
   ];
 
@@ -131,7 +134,7 @@ export default function About() {
             >
               {/* Resume link */}
               <motion.a
-                href="https://drive.google.com/file/d/1rkPngd0G_I4Snm41y2fksV6Ac7MlhXTD/view?usp=sharing"
+                href="https://drive.google.com/file/d/1DcBrU_gkuVJ4eHv1c4RBByxZuhdOhmmQ/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-2xl font-semibold text-[#4a4a2a] underline"
